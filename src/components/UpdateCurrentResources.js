@@ -23,11 +23,11 @@ function UpdateCurrentResources() {
 
 function handleUpdate(e){
   const UpdatedCurrentResources = {
-      csid : currentresources.csid,
-      name,
+      csid : csid || currentresources.csid,
+      name : name || currentresources.name,
       availablenumber,
-      threshold,
-      unitprice,
+      threshold : threshold ||currentresources.threshold,
+      unitprice : unitprice || currentresources.unitprice,
     };
     axios
       .put(`http://localhost:8070/currentresources/update/`+id,UpdatedCurrentResources)
@@ -52,7 +52,7 @@ function handleUpdate(e){
           <br />
           <br />
           <label>Name:</label>
-          <input type="text" required placeholder={currentresources.name} onChange={(e) => setName(e.target.value)} />
+          <input type="text" placeholder={currentresources.name} onChange={(e) => setName(e.target.value)} />
           <br />
           <br />
           <label>AvailableNumber:</label>
@@ -64,11 +64,11 @@ function handleUpdate(e){
           <br />
           <br />
           <label>Threshold:</label>
-          <input type="number" required placeholder={currentresources.threshold} onChange={(e) => setThreshold(e.target.value)} />
+          <input type="number" placeholder={currentresources.threshold} onChange={(e) => setThreshold(e.target.value)} />
           <br />
           <br />
           <label>UnitPrice:</label>
-          <input type="number" required placeholder={currentresources.unitprice} onChange={(e) => setUnitPrice(e.target.value)} />
+          <input type="number" placeholder={currentresources.unitprice} onChange={(e) => setUnitPrice(e.target.value)} />
           <br />
           <br />
           <button type="submit">Update CurrentResources</button>

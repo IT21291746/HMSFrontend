@@ -49,7 +49,7 @@ import {useNavigate } from "react-router-dom";
                  <a href="/doctorHome">Home</a>
              </li>
              <li className="header-nav-li">
-                 <a href="/report">Appointments</a>
+                 <a href="#">Appointments</a>
             </li>
              <li className="header-nav-li">
                  <a href="doctor_labmanagement">Lab Management</a>

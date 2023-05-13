@@ -15,6 +15,7 @@ function ResourceHeaderComponent() {
     <Route exact path="/updateStaticResources/:id" element={<ResourceHeader />}/>
     <Route exact path="/viewAllResources" element={<ResourceHeader />}/>
     <Route exact path="/viewSelectedStaticResources/:id" element={<ResourceHeader />}/>
+    <Route exact path="/resource_order" element={<ResourceHeader />}/>
     
     </Routes>
   );

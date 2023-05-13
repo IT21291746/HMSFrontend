@@ -52,7 +52,7 @@ import {useNavigate } from "react-router-dom";
                  <a href="/viewCurrentResources">Resources</a>
             </li>
              <li className="header-nav-li">
-                 <a href="#">Orders</a>
+                 <a href="/resource_order">Orders</a>
              </li>
              <li className="header-nav-li">
                  <a href="/viewAllResources">Manage Resources</a>

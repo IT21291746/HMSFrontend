@@ -46,6 +46,7 @@ import ViewAllResources from './components/ViewAllResources';
 import ViewSelectedStaticResources from './components/ViewSelectedStaticResources';
 import LandingPage from './components/LandingPage';
 import Doctor_LabManagement from './components/Doctor_LabManagement';
+import Resource_Order from './components/Resource_Order';
 
 function App() {
 
@@ -135,6 +136,7 @@ function App() {
             <Route path="/viewAllResources" element={<ViewAllResources/>} />
             <Route path="/viewSelectedStaticResources/:id" element={<ViewSelectedStaticResources/>} />
             <Route path="/doctor_labmanagement" element={<Doctor_LabManagement/>} />
+            <Route path="/resource_order" element={<Resource_Order/>} />
 
           </Routes>
           
