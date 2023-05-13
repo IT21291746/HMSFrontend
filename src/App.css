@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body { 
+   background-image:linear-gradient(to right, rgba(0, 151.59753173589706, 184.87500607967377, 1),rgba(0.2833355963230133, 55.81101380288601, 68.00000354647636, 1)) ;
+  /* background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
+  color: white; */
+}
+/* 
+.overlay {
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+}
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 1.5rem;
+}
+.navbar-default .navbar-brand {
+  color: white;
+  opacity: 0.9;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+
+}.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: white;
+  opacity: 1;
+}
+ */
+#logout-btn{
+  color: red;
+}
+/* .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  color: white;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+#content {
+  text-align: center;
+  margin-top: 25%;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0, 0,0.1),
+                0px 18px 23px rgba(0, 0,0,0.1);
+}
+
+.landing-page-h1{
+  font-weight: 700;
+  font-size: 5em;
+}
+.hr {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+table{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  text-align: center;
+}
+
+td,th{
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even){background-color: #ff22;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.main-div{
+  margin-left:25%;
+  padding:80px 16px;
+}
+
+/*nav bar*/
+
+.header-nav-ul {
+  list-style-type: none;
+  margin-top: 11%;
+  padding: 0;
+  width: 20%;
+  background-color: transparent;
+  position: fixed;
+  height: 80%;
+  overflow: auto;
+}
+.header-nav-li{
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: whitesmoke;
+  height: 10%;
+  text-align: left;
+  margin-top: 4%;
+}
+
+.header-nav-li a {
+  display: block;
+  color: rgba(0.2833355963230133, 55.81101380288601, 68.00000354647636, 1);
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+button{
+  text-decoration: none;
+}
+
+.header-nav-li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.header-nav-li a:hover:not(.active) {
+  color: yellow;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-color: yellow;
+}
+
+.header-nav-li:hover:not(.active) {
+  color: yellow;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-color: yellow;
+}
+
+.srilanka-emblem{
+  margin-top: 10px;
+  margin-left: 94%;
+  margin-bottom: 100px;
+  position:fixed;
+  overflow:scroll;
+}
+
+.srilanka-emblem-1{
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-bottom: 100px;
+  position:fixed;
+  overflow:scroll;
+}
+
+.main-heading{
+  margin-top: 48px;
+  margin-left: 110px;
+  position: fixed;
+}
+
+form{
+  margin-top: 20px;
+}
+
+.btn-div{
+  margin-top: 0;
+  width: 100%;
+  height: 90%;
+  
+}
+
+.btn-left{
+  width: 350px;
+  height: 200px;
+  margin-left: 0;
+  background-color: blueviolet;
+  border-radius: 40px;
+
+}
+
+.btn-right{
+  width: 400px;
+  height: 250px;
+  margin-left: 0;
+}
+
+.btn-right:hover{
+  background-color: #04AA6D;
+}
+
+.btn-left:hover{
+  background-color: #04AA6D;
+}
+
+.btn-new{
+  width: 250px;
+  height: 70px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-top: 100px;
+}
+
+.box-class{
+  margin-top: 125px;
+}
+
+.btn-create{
+  margin-left: 60%;
+  margin-bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#status{
+  width: 11%;
+  
+}
+
+.main-home-div{
+  margin-top: 100px;
+  height: 100vh;
+}
