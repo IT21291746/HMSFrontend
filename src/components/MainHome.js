@@ -15,6 +15,9 @@ function MainHome(){
       const handleResourceLoginClick = () => {
         window.location.href="/resourceLogin";
       };
+      const handlePharmacyLoginClick = () => {
+        window.location.href="/pharmacyLogin";
+      };
 
     return( 
         <center>
@@ -41,7 +44,7 @@ function MainHome(){
                         
                         <div className="col">    
                         <div className="btn-div p-3"> 
-                            <button className="btn-left">Pharmacy Management System</button>
+                            <button className="btn-left" onClick={handlePharmacyLoginClick}>Pharmacy Management System</button>
                         </div>
                         </div>
                         

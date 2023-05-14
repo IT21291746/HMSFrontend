@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {useNavigate } from "react-router-dom";
 
- function ResourceHeader(){
+ function PharmacyHeader(){
 
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
@@ -46,17 +46,17 @@ import {useNavigate } from "react-router-dom";
              </div>
              <ul className="header-nav-ul">
              <li className="header-nav-li">
-                 <a href="/resourceHome">Home</a>
+                 <a href="/labhome">DashBoard</a>
+             </li>
+             <li className="header-nav-li">
+                 <a href="/pharmacy_medicine">Medicines</a>
+            </li>
+             <li className="header-nav-li">
+                 <a href="/pharmacy_prescription">Prescriptions</a>
              </li>
              {/* <li className="header-nav-li">
-                 <a href="/viewCurrentResources">Resources</a>
-            </li> */}
-             <li className="header-nav-li">
-                 <a href="/resource_order">Manage Orders</a>
-             </li>
-             <li className="header-nav-li">
-                 <a href="/viewAllResources">Manage Resources</a>
-             </li>
+                 <a href="/viewDoctor">View Task</a>
+             </li> */}
              <li className="header-nav-li">
                  <a href="/profile">My Profile</a>
              </li>
@@ -75,4 +75,4 @@ import {useNavigate } from "react-router-dom";
  }
 
 
-export default ResourceHeader;
+export default PharmacyHeader;

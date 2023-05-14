@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState , useEffect} from "react";
 import axios from "axios"
 
 export default function AddMedicine(){
@@ -8,6 +8,26 @@ export default function AddMedicine(){
     const [price, setPrice] = useState(0);
     const [dosage, setDosage] = useState("");
     const [quantity, setQuantity] = useState(0);
+    useEffect(() => {
+      generateEmployeeId();
+    }, []);
+  
+    function generateEmployeeId() {
+      axios
+        .post("http://localhost:8070/medicine/maxId")
+        .then((response) => {
+          const maxId = response.data.maxId;
+          const newId = "MED" + (parseInt(maxId.substring(3)) + 1);
+          setMedicineID(newId);
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    }
+
+
+
+
 
 function sendData(e){
     e.preventDefault();
@@ -42,7 +62,7 @@ function sendData(e){
           <form onSubmit={sendData}> 
             <div className="mb-3">
               <label for="medicineId" className="form-label">Medicine ID</label>
-              <input type="text" className="form-control" id="medicineId" onChange={(e)=>{setMedicineID(e.target.value);}}></input>
+              <input type="text" className="form-control" id="medicineId" value={medicine_id} readOnly></input>
             </div>
 
             <div className="mb-3">
@@ -62,10 +82,6 @@ function sendData(e){
 
             <div className="mb-3">
               <label for="price" className="form-label">Price</label>
-              <input type="text" className="form-control" id="price" onChange={(e)=>{setPrice(e.target.value);}}></input>
-            </div>
-            <div className="mb-3">
-              <label for="price" className="form-label">Test</label>
               <input type="text" className="form-control" id="price" onChange={(e)=>{setPrice(e.target.value);}}></input>
             </div>
               

@@ -42,40 +42,49 @@ function handleUpdate(e){
 
   return (
     <div className="main-div">
-    <center>
-      <h2>Update Medicine</h2>
-      <div>
+    <div className="container pt-1">
+      
+      <div className="row">
+        <div className="col-12 col-sm-08  col-md-8 m-auto">
+          <div className="card border-0 shadow">
+          <div className="card-body">
+          <center>  
+          <h2>Update Medicine Details</h2>
+          </center>
         <form onSubmit={handleUpdate}>
-          <label>Medicine ID:</label>
-          <input type="text" placeholder={medicine.medicine_id} onChange={(e) => setMedicineId(e.target.value)} />
-          <br />
-          <br />
-          <label>Name:</label>
-          <input type="text" placeholder={medicine.name} onChange={(e) => setName(e.target.value)} />
-          <br />
-          <br />
-          <label>Price:</label>
-          <input
-            type="number"
-            placeholder={medicine.price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-          <br />
-          <br />
-          <label>Dosage:</label>
-          <input type="text" placeholder={medicine.dosage} onChange={(e) => setDosage(e.target.value)} />
-          <br />
-          <br />
-          <label>Quantity:</label>
-          <input type="number" placeholder={medicine.quantity} onChange={(e) => setQuantity(e.target.value)} />
-          <br />
-          <br />
-          <br />
-          <br />
-          <button type="submit">Update Medicine</button>
+
+          <div className="mt-3 mb-3">
+          <label className="form-label">Medicine ID:</label>
+          <input type="text" className="form-control" placeholder={medicine.medicine_id} onChange={(e) => setMedicineId(e.target.value)} />
+          </div>
+
+          <div className="mb-3">
+          <label className="form-label">Name:</label>
+          <input type="text" className="form-control" placeholder={medicine.name} onChange={(e) => setName(e.target.value)} />
+          
+          </div>
+          
+          <div className="mb-3">
+          <label className="form-label">Price:</label>
+          <input type="number" className="form-control" placeholder={medicine.price} onChange={(e) => setPrice(e.target.value)}/>
+          </div>
+          
+          <div className="mb-3">
+          <label className="form-label">Dosage:</label>
+          <input type="text" className="form-control" placeholder={medicine.dosage} onChange={(e) => setDosage(e.target.value)} />
+          </div>
+          
+          <div className="mb-3">
+          <label className="form-label">Quantity:</label>
+          <input type="number" className="form-control" placeholder={medicine.quantity} onChange={(e) => setQuantity(e.target.value)} />
+          </div>
+          <button  className="btn btn-info mt-3 mb-3" type="submit">Update Medicine</button>
         </form>
       </div>
-    </center>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }

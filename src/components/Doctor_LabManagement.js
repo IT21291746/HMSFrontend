@@ -4,11 +4,12 @@ import { saveAs } from 'file-saver';
 
 function Doctor_LabManagement() {
 
-    const [showlabrequests, setShowLabRequests] = useState(true);
+    const [showlabrequests, setShowLabRequests] = useState(false);
     const [showlabreports, setShowLabReports] = useState(false);
     const [user, setUser] = useState(null);
     const [order, setOrder] = useState([]);
     const [result, setResult] = useState([]);
+    
 
     const completedorders = Array.isArray(order) ? order.filter((order) => order.status === "Completed") : [];
 
@@ -28,6 +29,7 @@ function Doctor_LabManagement() {
             });
         }
       }, []);
+
 
       useEffect(()=>{
         axios.get(`http://localhost:8070/result/`).then((res)=> {

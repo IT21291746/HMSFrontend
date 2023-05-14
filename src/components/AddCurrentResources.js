@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState , useEffect} from "react";
 import axios from "axios"
 
 export default function AddCurrentResources(){
@@ -36,6 +36,24 @@ function sendData(e){
     })
 }
 
+useEffect(() => {
+  generateId();
+}, []);
+
+function generateId() {
+  axios
+    .post("http://localhost:8070/currentresources/maxId")
+    .then((response) => {
+      const maxId = response.data.maxId;
+      const newId = "CRID_" + (parseInt(maxId.substring(5)) + 1);
+      setCSID(newId);
+    })
+    .catch((err) => {
+      alert(err);
+    });
+}
+
+
     return(
         <div className="main-div">
           <div className="container">
@@ -46,7 +64,7 @@ function sendData(e){
 
             <div className="mb-3">
               <label for="csid" className="form-label">CurrentResources ID</label>
-              <input type="text" className="form-control" id="csid" onChange={(e)=>{setCSID(e.target.value);}}></input>
+              <input type="text" className="form-control" id="csid" value={csid} readOnly></input>
             </div>
 
             <div className="mb-3">

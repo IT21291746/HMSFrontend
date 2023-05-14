@@ -5,7 +5,6 @@ import{useParams} from 'react-router-dom';
 function UpdateStaticResources() {
   const {id} = useParams();
   const [staticresources, setStaticResources] = useState([]);
-  const [srid, setSRID] = useState("");
   const [name, setName] = useState("");
   const [availablenumber, setAvailableNumber] = useState("");
 
@@ -39,32 +38,40 @@ function handleUpdate(e){
 
   return (
     <div className="main-div">
-    <center>
-      <h2>Update StaticResources</h2>
-      <div>
+    <div className="container pt-1">
+                <div className="row">
+                  <div className="col-12 col-sm-08  col-md-9 m-auto">
+                    <div className="card border-0 shadow">
+                      <div className="card-body">
+                        <center>  
+                          <h2>Update Current Resources</h2>
+                        </center> 
         <form onSubmit={handleUpdate}>
-          <label>StaticResources ID:</label>
-          <input type="text" value={staticresources.srid} />
-          <br />
-          <br />
-          <label>Name:</label>
-          <input type="text" required placeholder={staticresources.name} onChange={(e) => setName(e.target.value)} />
-          <br />
-          <br />
-          <label>AvailableNumber:</label>
+
+          <div className="mb-3 mt-3">
+          <label className="form-label" >StaticResources ID:</label>
+          <input className="form-control" type="text" value={staticresources.srid} />
+          </div>
+          <div className="mb-3">
+          <label className="form-label" >Name:</label>
+          <input className="form-control" type="text" required placeholder={staticresources.name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div  className="mb-3">
+          <label className="form-label" >AvailableNumber:</label>
           <input
+          className="form-control"
             type="number" required
             placeholder={staticresources.availablenumber}
             onChange={(e) => setAvailableNumber(e.target.value)}
           />
-          <br />
-          <br />
-          <br />
-          <br />
-          <button type="submit">Update StaticResources</button>
+          </div>
+          <button className="btn btn-success mb-3" type="submit">Update StaticResources</button>
         </form>
       </div>
-    </center>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }

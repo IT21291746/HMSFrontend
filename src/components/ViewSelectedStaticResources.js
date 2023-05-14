@@ -15,6 +15,10 @@ function ViewSelectedStaticResources() {
 
     const counttotal = substaticresources.length;
 
+
+    function closebtn(){
+    setShowAddSubStaticResources(false);
+    }
   function sendData(e){
     e.preventDefault();
     
@@ -68,6 +72,8 @@ useEffect(()=>{
       alert("Error with retriving data");
     });
   },[id]);
+
+
 
 
 const fetchSubStaticResources = async (id) => {
@@ -163,34 +169,45 @@ const fetchSubStaticResources = async (id) => {
 
             {showaddsubstaticresources && 
 
-                    <div>
-                        <form onSubmit={sendData}> 
-                        <div>
-                          <label for="" >Sub Resource ID</label>
-                          <input type="text" required className="form-control" value={ssrid} readOnly/>
-
-
-                          <label for="" >Availability</label>
+<div className="container pt-1 mt-5">
+<div className="row">
+  <div className="col-12 col-sm-08  col-md-7 m-auto">
+    <div className="card border-0 shadow">
+      <div className="card-body">
+        <button className="float-end btn btn-danger" onClick={(e)=>closebtn()}>X</button>
+                      <form onSubmit={sendData}> 
+                      <div className="mt-3 mb-3">
+                        <label for="" >Sub Resource ID</label>
+                        <input type="text" required className="form-control" value={ssrid} readOnly/>
+                      </div>
+                      <div className="mb-3">
+                          <label for="" >Availability</label><br/>
                           <input type="radio" name="availability" value="Available"  onChange={(e)=>{setAvailability(e.target.value);}} />Available
                           <input type="radio" name="availability" value="Not Available"  onChange={(e)=>{setAvailability(e.target.value);}} />Not Available
-
+                      </div>
+                      <div className="mb-3">
                             <select className="form-control" required onChange={(e)=>{setLocation(e.target.value);}}>
+                            <option value="Location A">Select Location</option>
                                 <option value="Location A">Location A</option>
                                 <option value="Location B">Location B</option>
                                 <option value="Location C">Location C</option>
                             </select>
-
-                            
-                            <label for="" >Condition</label>
+                      </div>
+                      <div className="mb-3">   
+                            <label for="" >Condition</label><br/>
                           <input type="radio" name="condition" value="Brand New"  onChange={(e)=>{setCondition(e.target.value);}} />Brand New
                           <input type="radio" name="condition" value="Used"  onChange={(e)=>{setCondition(e.target.value);}} />Used
-
-                        
-                        <button className="btn btn-success" type="submit">Confirm</button>
+                      </div>
+                      <div>
+                        <button className="btn btn-success mb-3" type="submit">Confirm</button>
 
                         </div>
                       </form>
                     </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
             
             
             }

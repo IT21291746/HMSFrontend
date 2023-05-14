@@ -71,6 +71,9 @@ const fetchCurrentResources = async (id) => {
     <div className="main-div">
         <div className="container mt-5">
           <div className="row">
+            <center>
+            <h3 className="mb-5">Items Below Threshold</h3>
+            </center>
             <table>
               <thead>
                 <tr>

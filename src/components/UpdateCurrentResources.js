@@ -43,38 +43,47 @@ function handleUpdate(e){
 
   return (
     <div className="main-div">
-    <center>
-      <h2>Update CurrentResources</h2>
-      <div>
+    <div className="container pt-1">
+                <div className="row">
+                  <div className="col-12 col-sm-08  col-md-9 m-auto">
+                    <div className="card border-0 shadow">
+                      <div className="card-body">
+                        <center>  
+                          <h2>Update Current Resources</h2>
+                        </center> 
         <form onSubmit={handleUpdate}>
-          <label>CurrentResources ID:</label>
-          <input type="text" value={currentresources.csid} />
-          <br />
-          <br />
-          <label>Name:</label>
-          <input type="text" placeholder={currentresources.name} onChange={(e) => setName(e.target.value)} />
-          <br />
-          <br />
-          <label>AvailableNumber:</label>
+          <div className="mt-3 mb-3">
+          <label className="form-label">CurrentResources ID:</label>
+          <input type="text" className="form-control" value={currentresources.csid} />
+          </div>
+          <div className="mb-3">
+          <label className="for-label">Name:</label>
+          <input type="text" className="form-control" placeholder={currentresources.name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div className="mb-3">
+          <label className="for-label">AvailableNumber:</label>
           <input
             type="number" required
+            className="form-control"
             placeholder={currentresources.availablenumber}
             onChange={(e) => setAvailableNumber(e.target.value)}
           />
-          <br />
-          <br />
-          <label>Threshold:</label>
-          <input type="number" placeholder={currentresources.threshold} onChange={(e) => setThreshold(e.target.value)} />
-          <br />
-          <br />
-          <label>UnitPrice:</label>
-          <input type="number" placeholder={currentresources.unitprice} onChange={(e) => setUnitPrice(e.target.value)} />
-          <br />
-          <br />
-          <button type="submit">Update CurrentResources</button>
+          </div>
+          <div className="mb-3">
+          <label className="frorm-label">Threshold:</label>
+          <input type="number" className="form-control" placeholder={currentresources.threshold} onChange={(e) => setThreshold(e.target.value)} />
+          </div>
+          <div className="mb-3">
+          <label className="for-label">UnitPrice:</label>
+          <input type="number" className="form-control" placeholder={currentresources.unitprice} onChange={(e) => setUnitPrice(e.target.value)} />
+          </div>
+          <button className="btn btn-primary mb-3" type="submit">Update CurrentResources</button>
         </form>
       </div>
-    </center>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }

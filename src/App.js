@@ -47,6 +47,11 @@ import ViewSelectedStaticResources from './components/ViewSelectedStaticResource
 import LandingPage from './components/LandingPage';
 import Doctor_LabManagement from './components/Doctor_LabManagement';
 import Resource_Order from './components/Resource_Order';
+import PharmacyLogin from './components/PharmacyLogin';
+import PharmacyHome from './components/PharmacyHome';
+import PharmacyHeaderComponent from './components/PharmacyHeaderComponents';
+import Pharmacy_Medicine from './components/Pharmacy_Medicines';
+import Pharmacy_Prescription from './components/Pharmacy_Prescription';
 
 function App() {
 
@@ -94,9 +99,13 @@ function App() {
         <MainHomeHeaderCom handleSignOut={handleSignOut}/>
         <DoctorHeaderComponent handleSignOut={handleSignOut}/>
         <ResourceHeaderComponent handleSignOut={handleSignOut}/>
+        <PharmacyHeaderComponent handleSignOut={handleSignOut}/>
+        
+
         <PrivateRoute path="/labhome" element={<Home />}/>
         <PrivateRoute path="/doctorHome" element={<DoctorHome />}/>
         <PrivateRoute path="/resourceHome" element={<ResourceHome />}/>
+        <PrivateRoute path="/pharmacyHome" element={<PharmacyHome />}/>
         
           <Routes>
             <Route path="/addPatient" element={<AddPatient/>}/>
@@ -137,6 +146,9 @@ function App() {
             <Route path="/viewSelectedStaticResources/:id" element={<ViewSelectedStaticResources/>} />
             <Route path="/doctor_labmanagement" element={<Doctor_LabManagement/>} />
             <Route path="/resource_order" element={<Resource_Order/>} />
+            <Route path="/pharmacylogin" element={<PharmacyLogin/>} />
+            <Route path="/pharmacy_medicine" element={<Pharmacy_Medicine/>} />
+            <Route path="/pharmacy_prescription" element={<Pharmacy_Prescription/>} />
 
           </Routes>
           

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState , useEffect} from "react";
 import axios from "axios"
 
 export default function AddStaticResources(){
@@ -6,6 +6,24 @@ export default function AddStaticResources(){
     const [srid, setSRID] = useState("");
     const [name, setName] = useState("");
     const [availablenumber, setAvailableNumber] = useState();
+    
+
+    useEffect(() => {
+      generateId();
+    }, []);
+    
+    function generateId() {
+      axios
+        .post("http://localhost:8070/staticresources/maxId")
+        .then((response) => {
+          const maxId = response.data.maxId;
+          const newId = "SRID_" + (parseInt(maxId.substring(5)) + 1);
+          setSRID(newId);
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    }
     
 
 function sendData(e){
@@ -40,7 +58,7 @@ function sendData(e){
 
             <div className="mb-3">
               <label for="srid" className="form-label">StaticResources ID</label>
-              <input type="text" className="form-control" id="srid" onChange={(e)=>{setSRID(e.target.value);}}></input>
+              <input type="text" className="form-control" id="srid" value={srid} readOnly></input>
             </div>
 
             <div className="mb-3">
